@@ -118,7 +118,7 @@ fun MainScreen(
         }
     )
 
-    LaunchedEffect(datePickerState) {
+    LaunchedEffect(datePickerState.selectedDateMillis) {
         coroutineScope.launch {
             viewModel.processEvent(
                 MainStateEvent.DateChanged(
